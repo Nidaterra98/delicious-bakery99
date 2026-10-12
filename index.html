@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Delicious Bakery – Butterscotch Cake, Cupcakes & Muffins | Free Delivery Across UAE</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+:root{--bg:#fdf3f4;--surface:#fff;--ink:#3a1f26;--muted:#7a5a62;--gold:#e59a1f;--berry:#b8264f;--mint:#d8e8cf;--line:#f0d9dc;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#241418;--surface:#33202a;--ink:#fbe9ec;--muted:#cfaab2;--gold:#f2b24a;--berry:#ff7a9c;--mint:#3b4a37;--line:#4a2f38}}
+:root[data-theme="dark"]{--bg:#241418;--surface:#33202a;--ink:#fbe9ec;--muted:#cfaab2;--gold:#f2b24a;--berry:#ff7a9c;--mint:#3b4a37;--line:#4a2f38}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 "DM Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;line-height:1.1;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--berry);outline-offset:3px}
+.bar{background:var(--ink);color:var(--bg);text-align:center;padding:9px 16px;font-weight:700;font-size:15px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 0;flex-wrap:wrap;gap:8px}
+.logo{font:700 26px Fraunces,Georgia,serif;text-decoration:none}
+nav a{margin-left:16px;text-decoration:none;font-weight:500}
+nav a:hover{color:var(--berry)}
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:32px;align-items:center;padding:30px 0 56px}
+.hero h1{font-size:clamp(40px,7vw,74px);font-weight:700}
+.hero p{max-width:46ch;color:var(--muted);font-size:19px;margin:18px 0 26px}
+.btn{display:inline-block;background:var(--berry);color:#fff;padding:14px 26px;border-radius:999px;font-weight:700;text-decoration:none}
+.btn.alt{background:transparent;color:var(--ink);border:2px solid var(--ink);margin-left:8px}
+.heroart{background:var(--mint);border-radius:50% 50% 24px 24px;padding:28px;text-align:center;position:relative}
+.heroart svg{width:100%;max-width:380px;height:auto}
+.badge{position:absolute;top:18px;right:14px;background:var(--gold);color:#3a1f26;font-weight:700;padding:8px 14px;border-radius:999px;transform:rotate(8deg);font-size:15px}
+section{padding:48px 0}
+h2{font-size:clamp(30px,4.5vw,44px);margin-bottom:8px}
+.sub{color:var(--muted);margin:0 0 26px;max-width:60ch}
+.star{display:grid;grid-template-columns:1fr 1.2fr;gap:30px;background:var(--surface);border:2px solid var(--gold);border-radius:28px;padding:28px;align-items:center}
+.star svg{width:100%;height:auto;background:var(--bg);border-radius:20px;padding:14px}
+.price{font:700 28px Fraunces,Georgia,serif;color:var(--berry)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden}
+.card svg{width:100%;height:160px;display:block;background:var(--mint)}
+.card div{padding:14px 16px 18px}
+
+/* Keep all cupcake prices aligned on the same horizontal line */
+#cupcakes .card{height:100%;display:flex;flex-direction:column}
+#cupcakes .card > div{display:flex;flex-direction:column;flex:1;height:100%}
+#cupcakes .card > div strong{margin-top:auto;display:block}
+.card h3{font-size:20px}
+.card p{margin:4px 0 8px;color:var(--muted);font-size:15px}
+.perks{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.perks div{background:var(--mint);border-radius:18px;padding:18px}
+.perks strong{display:block;font:700 20px Fraunces,Georgia,serif}
+.reviews{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+blockquote{margin:0;background:var(--surface);border-left:6px solid var(--gold);border-radius:14px;padding:20px}
+blockquote p{margin:8px 0 12px}
+.stars{color:var(--gold);letter-spacing:2px}
+cite{font-style:normal;font-weight:700}
+.note{font-size:14px;color:var(--muted);margin-top:18px}
+form{display:grid;gap:12px;max-width:520px}
+input,select,textarea{font:inherit;padding:12px;border-radius:12px;border:1px solid var(--line);background:var(--surface);color:var(--ink);width:100%}
+.ok{color:var(--berry);font-weight:700;min-height:1.5em}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);text-align:center;font-size:15px}
+@media (max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:760px){.hero,.star{grid-template-columns:1fr}.grid{grid-template-columns:1fr}nav a{margin:0 12px 0 0}}
+@media (prefers-reduced-motion:no-preference){.badge{animation:wob 3s ease-in-out infinite}@keyframes wob{50%{transform:rotate(-4deg)}}}
+.pop{position:fixed;inset:0;background:rgba(36,20,24,.6);display:none;align-items:center;justify-content:center;padding:20px;z-index:50}
+.pop.show{display:flex}
+.pbox{background:var(--surface);color:var(--ink);border:3px solid var(--gold);border-radius:28px;max-width:420px;width:100%;padding:32px 26px;text-align:center;position:relative}
+.pbox h2{font-size:34px}
+.pbox p{color:var(--muted);margin:10px 0 18px}
+.code{display:inline-block;font:700 28px Fraunces,Georgia,serif;letter-spacing:3px;border:2px dashed var(--berry);color:var(--berry);border-radius:14px;padding:10px 22px;margin-bottom:18px}
+.x{position:absolute;top:10px;right:14px;background:none;border:0;font-size:28px;line-height:1;cursor:pointer;color:var(--ink)}
+.pbox .btn{border:0;cursor:pointer;font:inherit;font-weight:700}
+@media (prefers-reduced-motion:no-preference){.pop.show .pbox{animation:pin .35s ease-out}@keyframes pin{from{transform:translateY(16px);opacity:0}}}
+
+.store{display:grid;grid-template-columns:1fr 1fr;gap:20px;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:24px}
+.store-card{background:var(--mint);border-radius:18px;padding:22px}
+.store-card h3{font-size:26px;margin-bottom:10px}
+.store-card p{margin:7px 0;color:var(--ink)}
+.store-label{display:inline-block;background:var(--berry);color:#fff;padding:6px 12px;border-radius:999px;font-size:13px;font-weight:700;margin-bottom:12px}
+.store-map{min-height:260px;border-radius:18px;background:var(--bg);border:2px dashed var(--line);display:flex;align-items:center;justify-content:center;text-align:center;padding:25px}
+.store-map .pin{font-size:52px;display:block;margin-bottom:8px}
+.store-map strong{font-family:Fraunces,Georgia,serif;font-size:24px}
+.store-actions{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap}
+@media (max-width:760px){.store{grid-template-columns:1fr}}
+
+
+/* UX refinement: readable type, consistent cards and clear pricing */
+body{font-size:16px;line-height:1.55}
+h2{font-size:clamp(30px,4vw,40px);letter-spacing:-.02em}
+h3{letter-spacing:-.01em}
+.grid .card{display:flex;flex-direction:column;height:100%;min-width:0;transition:transform .2s ease,box-shadow .2s ease}
+.grid .card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(58,31,38,.10)}
+.grid .card > div{display:flex;flex-direction:column;flex:1;min-width:0}
+.grid .card h3{font-size:clamp(18px,1.7vw,21px);line-height:1.15;margin-bottom:7px}
+.grid .card p{font-size:14px;line-height:1.5;margin:0 0 14px}
+.card-bottom{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:auto;padding-top:4px}
+.price-pill{display:inline-flex;align-items:center;min-height:34px;padding:6px 11px;border-radius:999px;background:var(--berry);color:#fff;font:700 15px/1 "DM Sans",system-ui,sans-serif;white-space:nowrap}
+.mini-btn{display:inline-flex;align-items:center;justify-content:center;min-height:34px;padding:7px 12px;border-radius:999px;background:transparent;color:var(--berry);border:1.5px solid var(--berry);text-decoration:none;font-size:13px;font-weight:700;white-space:nowrap;transition:.2s ease}
+.mini-btn:hover{background:var(--berry);color:#fff}
+
+
+.carousel-shell{position:relative;display:flex;align-items:center;gap:10px}
+.carousel-track{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 60px)/4);gap:20px;overflow-x:auto;scroll-behavior:smooth;scroll-snap-type:x mandatory;padding:5px 2px 12px;flex:1;scrollbar-width:thin}
+.carousel-track .card{scroll-snap-align:start}
+.carousel-arrow{flex:0 0 42px;width:42px;height:42px;border:1px solid var(--line);border-radius:50%;background:var(--surface);color:var(--ink);font-size:30px;line-height:1;cursor:pointer;box-shadow:0 6px 18px rgba(58,31,38,.10);z-index:2}
+.carousel-arrow:hover{background:var(--berry);color:#fff;border-color:var(--berry)}
+@media (max-width:900px){.carousel-track{grid-auto-columns:calc((100% - 20px)/2)}}
+@media (max-width:760px){.carousel-shell{gap:6px}.carousel-track{grid-auto-columns:100%}.carousel-arrow{flex-basis:36px;width:36px;height:36px;font-size:26px}.grid .card p{font-size:14px}}
+
+
+.store-map{min-height:300px;border-radius:18px;overflow:hidden;background:var(--bg);border:1px solid var(--line)}
+.store-map iframe{display:block;width:100%;height:100%;min-height:300px;border:0}
+
+.carousel-track .card{display:flex;flex-direction:column;height:100%;min-width:0}
+.carousel-track .card > div{display:flex;flex-direction:column;flex:1;min-width:0}
+.grid .card-bottom,.carousel-track .card-bottom{padding:0}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+ <symbol id="cake" viewBox="0 0 200 200">
+  <ellipse cx="100" cy="176" rx="82" ry="12" fill="rgba(0,0,0,.12)"/>
+  <rect x="34" y="104" width="132" height="64" rx="10" fill="#c9822a"/>
+  <rect x="40" y="82" width="120" height="30" rx="8" fill="#f6d7a0"/>
+  <rect x="34" y="126" width="132" height="8" fill="#f6d7a0"/>
+  <rect x="46" y="52" width="108" height="36" rx="10" fill="#c9822a"/>
+  <path d="M46 62h108v8c-8 12-14-2-22 10s-16-6-26 6-16-8-26 4-18-8-34 2z" fill="#e59a1f"/>
+  <circle cx="100" cy="46" r="9" fill="#b8264f"/><rect x="99" y="30" width="2.5" height="10" fill="#7a3a2a"/>
+  <circle cx="68" cy="56" r="5" fill="#fff" opacity=".7"/><circle cx="132" cy="56" r="5" fill="#fff" opacity=".7"/>
+ </symbol>
+ <symbol id="cupcake" viewBox="0 0 200 200">
+  <ellipse cx="100" cy="176" rx="56" ry="8" fill="rgba(0,0,0,.12)"/>
+  <path d="M54 110h92l-12 62H66z" fill="var(--liner,#7aa874)"/>
+  <path d="M60 114v54M80 114v58M100 114v58M120 114v58M140 114v54" stroke="rgba(0,0,0,.15)" stroke-width="3"/>
+  <path d="M50 112c-6-26 18-34 28-40 0-22 44-22 44 0 10 6 34 14 28 40z" fill="var(--top,#f2a1b8)"/>
+  <g fill="var(--chip,#3a1f26)" opacity="var(--chips,0)"><rect x="70" y="92" width="9" height="7" rx="2"/><rect x="108" y="84" width="9" height="7" rx="2"/><rect x="128" y="98" width="9" height="7" rx="2"/><rect x="90" y="70" width="9" height="7" rx="2"/><rect x="92" y="100" width="9" height="7" rx="2"/></g>
+  <circle cx="100" cy="52" r="9" fill="var(--cherry,#b8264f)"/>
+ </symbol>
+ <symbol id="muffin" viewBox="0 0 200 200">
+  <ellipse cx="100" cy="176" rx="58" ry="8" fill="rgba(0,0,0,.12)"/>
+  <path d="M58 118h84l-10 54H68z" fill="#e9d3b0"/>
+  <path d="M66 118v50M86 118v54M106 118v54M126 118v50" stroke="rgba(0,0,0,.12)" stroke-width="3"/>
+  <path d="M34 120c-8-44 28-74 66-74s74 30 66 74c-14-8-22-6-34-2-10-6-22-6-32 0-12-4-20-6-32 2-14 0-22-2-34 0z" fill="var(--mtop,#d68a3c)"/>
+  <g fill="var(--mdot,#5b3a8a)" opacity="var(--mdots,.9)"><circle cx="72" cy="86" r="6"/><circle cx="104" cy="70" r="6"/><circle cx="132" cy="92" r="6"/><circle cx="90" cy="102" r="5"/><circle cx="118" cy="108" r="5"/></g>
+ </symbol>
+ <symbol id="honey" viewBox="0 0 200 200">
+  <ellipse cx="100" cy="176" rx="82" ry="12" fill="rgba(0,0,0,.12)"/>
+  <rect x="34" y="70" width="132" height="98" rx="8" fill="#fff4dc"/>
+  <g fill="#c98a2e"><rect x="34" y="78" width="132" height="12"/><rect x="34" y="100" width="132" height="12"/><rect x="34" y="122" width="132" height="12"/><rect x="34" y="144" width="132" height="12"/></g>
+  <rect x="34" y="62" width="132" height="12" rx="6" fill="#b87a22"/>
+  <g fill="#e0b060"><circle cx="64" cy="58" r="4"/><circle cx="90" cy="56" r="3"/><circle cx="116" cy="58" r="4"/><circle cx="140" cy="56" r="3"/><circle cx="78" cy="52" r="3"/><circle cx="128" cy="52" r="3"/></g>
+  <path d="M100 30c6 8 10 12 10 18a10 10 0 0 1-20 0c0-6 4-10 10-18z" fill="#e59a1f"/>
+ </symbol>
+ <symbol id="tier" viewBox="0 0 200 200">
+  <ellipse cx="100" cy="176" rx="82" ry="12" fill="rgba(0,0,0,.12)"/>
+  <rect x="34" y="88" width="132" height="80" rx="10" fill="var(--sp,#4a2618)"/>
+  <rect x="34" y="122" width="132" height="12" fill="var(--cr,#fff)"/>
+  <rect x="30" y="76" width="140" height="20" rx="10" fill="var(--fr,#fff)"/>
+ </symbol>
+ <symbol id="croissant" viewBox="0 0 200 200">
+  <ellipse cx="100" cy="168" rx="70" ry="9" fill="rgba(0,0,0,.12)"/>
+  <path d="M20 140c4-50 40-84 80-84s76 34 80 84c-20-8-30-6-40-18-10 10-30 10-40 0-10 12-30 10-40 18-10-12-20-10-40 0z" fill="#d68a3c"/>
+  <path d="M70 62l10 70M100 56v78M130 62l-10 70" stroke="#a8631f" stroke-width="5" stroke-linecap="round"/>
+ </symbol>
+ <symbol id="donut" viewBox="0 0 200 200">
+  <ellipse cx="100" cy="172" rx="64" ry="8" fill="rgba(0,0,0,.12)"/>
+  <circle cx="100" cy="102" r="62" fill="#d68a3c"/><circle cx="100" cy="98" r="58" fill="#7a3a2a"/>
+  <circle cx="100" cy="98" r="18" fill="#d8e8cf"/>
+  <g stroke-width="5" stroke-linecap="round"><path d="M60 78l10-4" stroke="#fff"/><path d="M128 70l10 6" stroke="#f2b24a"/><path d="M70 126l8 6" stroke="#f2a1b8"/><path d="M130 124l10-4" stroke="#fff"/><path d="M96 56l2 10" stroke="#f2a1b8"/></g>
+ </symbol>
+</svg>
+
+<div class="pop" id="pop" role="dialog" aria-modal="true" aria-labelledby="pt">
+ <div class="pbox">
+  <button class="x" id="px" aria-label="Close">&times;</button>
+  <h2 id="pt">15% off your first purchase</h2>
+  <p>Welcome to Delicious! Use this code at checkout.</p>
+  <div class="code" id="pc">TASTY10</div><br>
+  <button class="btn" id="pcopy" type="button">Copy code</button>
+ </div>
+</div>
+<div class="bar">Free delivery across the UAE · 10% off your first order above AED 200</div>
+<div class="wrap">
+ <header>
+  <a class="logo" href="#top">Delicious</a>
+  <nav><a href="#cakes">Cakes</a><a href="#cupcakes">Cupcakes</a><a href="#muffins">Muffins</a><a href="#store">Visit us</a><a href="#reviews">Reviews</a><a href="#order">Order</a></nav>
+ </header>
+
+ <main id="top">
+  <div class="hero">
+   <div>
+    <h1>Baked fresh. Delivered free across the UAE.</h1>
+    <p>Delicious bakes cakes, cupcakes, muffins and pastries every morning with real butter and real chocolate. Start with our Butterscotch Cake, the one everyone comes back for.</p>
+    <a class="btn" href="#order">Order now</a><a class="btn alt" href="#cakes">See the menu</a>
+   </div>
+   <div class="heroart"><span class="badge">Top seller</span>
+    <svg viewBox="0 0 200 200" role="img" aria-label="Illustration of a Butterscotch Cake"><use href="#cake"/></svg>
+   </div>
+  </div>
+
+  <section id="cakes">
+   <h2>Our best seller</h2>
+   <p class="sub">More customers order this than anything else we bake.</p>
+   <div class="star">
+    <svg viewBox="0 0 200 200" role="img" aria-label="Butterscotch Cake"><use href="#cake"/></svg>
+    <div>
+     <h3 style="font-size:36px">Butterscotch Cake</h3>
+     <p>Soft butter sponge layered with whipped cream and crunchy caramelised butterscotch bits, finished with a glossy butterscotch drizzle.</p>
+     <div class="price">AED 65 per kg</div>
+     <p style="margin:14px 0 18px;color:var(--muted)">Order 1 kg or more, with free delivery across the UAE. Order a day ahead for custom messages.</p>
+     <a class="btn" href="#order" data-item="Butterscotch Cake">Order this cake</a>
+    </div>
+   </div>
+  </section>
+
+  <section>
+   <h2>More cakes</h2>
+   <p class="sub">All cakes come with free delivery across the UAE.</p>
+   <div class="carousel-shell" aria-label="More cakes carousel">
+    <button class="carousel-arrow prev" type="button" aria-label="Previous cakes" data-carousel="prev">‹</button>
+    <div class="carousel-track" tabindex="0">
+    <div class="card"><svg viewBox="0 0 200 200" role="img" aria-label="Russian Honey Cake"><use href="#honey"/></svg><div><h3>Russian Honey Cake</h3><p>Thin honey sponge layers with soft sour cream filling.</p><div class="card-bottom"><span class="price-pill">AED 55 per kg</span><a class="mini-btn" href="#order" data-item="Russian Honey Cake">Order</a></div></div>
+    </div><div class="card"><svg viewBox="0 0 200 200" role="img" aria-label="Black Forest Cake"><use href="#tier" style="--sp:#4a2618;--cr:#fff;--fr:#fff"/><g fill="#3a1f26"><rect x="40" y="70" width="10" height="6" rx="2" transform="rotate(-20 45 73)"/><rect x="62" y="66" width="10" height="6" rx="2"/><rect x="88" y="64" width="10" height="6" rx="2" transform="rotate(15 93 67)"/><rect x="114" y="66" width="10" height="6" rx="2"/><rect x="138" y="70" width="10" height="6" rx="2" transform="rotate(20 143 73)"/><rect x="40" y="100" width="8" height="5" rx="2"/><rect x="152" y="104" width="8" height="5" rx="2"/><rect x="60" y="152" width="8" height="5" rx="2"/><rect x="132" y="150" width="8" height="5" rx="2"/></g><circle cx="70" cy="62" r="8" fill="#b8264f"/><circle cx="68" cy="59" r="2" fill="#fff" opacity=".6"/><circle cx="100" cy="58" r="8" fill="#b8264f"/><circle cx="98" cy="55" r="2" fill="#fff" opacity=".6"/><circle cx="130" cy="62" r="8" fill="#b8264f"/><circle cx="128" cy="59" r="2" fill="#fff" opacity=".6"/></svg><div><h3>Black Forest Cake</h3><p>Chocolate sponge, whipped cream, cherries and dark chocolate shavings.</p><div class="card-bottom"><span class="price-pill">AED 30 per kg</span><a class="mini-btn" href="#order" data-item="Black Forest Cake">Order</a></div></div>
+    </div><div class="card"><svg viewBox="0 0 200 200" role="img" aria-label="White Forest Cake"><use href="#tier" style="--sp:#f6e3c0;--cr:#fff;--fr:#fff"/><g fill="#e8d9c0" stroke="#d8c4a2" stroke-width="1"><rect x="40" y="70" width="10" height="6" rx="2"/><rect x="62" y="66" width="10" height="6" rx="2"/><rect x="88" y="64" width="10" height="6" rx="2"/><rect x="114" y="66" width="10" height="6" rx="2"/><rect x="138" y="70" width="10" height="6" rx="2"/><rect x="40" y="100" width="8" height="5" rx="2"/><rect x="152" y="104" width="8" height="5" rx="2"/><rect x="60" y="152" width="8" height="5" rx="2"/><rect x="132" y="150" width="8" height="5" rx="2"/></g><circle cx="70" cy="62" r="8" fill="#b8264f"/><circle cx="68" cy="59" r="2" fill="#fff" opacity=".6"/><circle cx="100" cy="58" r="8" fill="#b8264f"/><circle cx="98" cy="55" r="2" fill="#fff" opacity=".6"/><circle cx="130" cy="62" r="8" fill="#b8264f"/><circle cx="128" cy="59" r="2" fill="#fff" opacity=".6"/></svg><div><h3>White Forest Cake</h3><p>Vanilla sponge, whipped cream, cherries and white chocolate shavings.</p><div class="card-bottom"><span class="price-pill">AED 30 per kg</span><a class="mini-btn" href="#order" data-item="White Forest Cake">Order</a></div></div>
+    </div><div class="card"><svg viewBox="0 0 200 200" role="img" aria-label="Vancho Cake"><use href="#tier" style="--sp:#f6e3c0;--cr:#fff;--fr:#fff"/><rect x="34" y="96" width="132" height="26" fill="#4a2618"/><rect x="34" y="134" width="132" height="34" rx="10" fill="#4a2618"/><rect x="34" y="122" width="132" height="12" fill="#fff"/><path d="M34 98h132v22H34z" fill="#4a2618"/><rect x="30" y="76" width="140" height="22" rx="11" fill="#fff"/><g fill="#fff"><circle cx="50" cy="70" r="10"/><circle cx="78" cy="66" r="10"/><circle cx="106" cy="66" r="10"/><circle cx="134" cy="68" r="10"/><circle cx="154" cy="72" r="8"/></g><g fill="#4a2618"><circle cx="78" cy="66" r="3"/><circle cx="134" cy="68" r="3"/></g></svg><div><h3>Vancho Cake</h3><p>Chocolate and vanilla sponge layered together with white cream frosting.</p><div class="card-bottom"><span class="price-pill">AED 45–50 per kg</span><a class="mini-btn" href="#order" data-item="Vancho Cake">Order</a></div></div>
+    </div><div class="card"><svg viewBox="0 0 200 200" role="img" aria-label="Nutty Caramel Cake"><use href="#tier" style="--sp:#c98a2e;--cr:#f6d7a0;--fr:#e0a53a"/><path d="M30 90h140c0 10-8 6-14 12s-10 0-16 8-12 0-18 6-10-2-16 6-12-2-18 4-12-4-24 2z" fill="#b87a22" opacity=".9"/><g fill="#8a5a2b"><circle cx="46" cy="72" r="5"/><circle cx="62" cy="68" r="4"/><circle cx="78" cy="72" r="5"/><circle cx="94" cy="66" r="4"/><circle cx="110" cy="72" r="5"/><circle cx="126" cy="68" r="4"/><circle cx="142" cy="72" r="5"/><circle cx="156" cy="78" r="4"/><circle cx="52" cy="110" r="3"/><circle cx="90" cy="104" r="3"/><circle cx="130" cy="112" r="3"/><circle cx="66" cy="148" r="3"/><circle cx="150" cy="140" r="3"/></g><g fill="#d9a56a"><circle cx="54" cy="64" r="4"/><circle cx="70" cy="76" r="3"/><circle cx="86" cy="64" r="3"/><circle cx="102" cy="76" r="4"/><circle cx="118" cy="64" r="3"/><circle cx="134" cy="76" r="3"/><circle cx="148" cy="66" r="4"/><circle cx="40" cy="80" r="3"/></g></svg><div><h3>Nutty Caramel Cake</h3><p>Caramel sponge and cream, topped with lots of crushed nuts.</p><div class="card-bottom"><span class="price-pill">AED 45–50 per kg</span><a class="mini-btn" href="#order" data-item="Nutty Caramel Cake">Order</a></div></div>
+    </div></div>
+    <button class="carousel-arrow next" type="button" aria-label="Next cakes" data-carousel="next">›</button>
+   </div>
+  </section>
+
+  <section id="cupcakes">
+   <h2>Cupcakes</h2>
+   <p class="sub">Sold individually or in boxes of 6 and 12.</p>
+   <div class="grid">
+    <div class="card"><svg viewBox="0 0 200 200" role="img" aria-label="Chocolate chip cupcake" style="--top:#e6b87a;--chips:1;--liner:#b8264f"><use href="#cupcake"/></svg><div><h3>Chocolate Chip Cupcake</h3><p>Vanilla sponge loaded with chocolate chips, with caramel buttercream.</p><div class="card-bottom"><span class="price-pill">AED 12</span><a class="mini-btn" href="#order" data-item="Chocolate Chip Cupcake">Order</a></div></div>
+    </div><div class="card"><svg viewBox="0 0 200 200" role="img" aria-label="Dark chocolate cupcake" style="--top:#4a2618;--liner:#3a1f26;--cherry:#e63b6a"><use href="#cupcake"/></svg><div><h3>Dark Chocolate Cupcake</h3><p>Deep, rich cocoa sponge with dark chocolate ganache.</p><div class="card-bottom"><span class="price-pill">AED 13</span><a class="mini-btn" href="#order" data-item="Dark Chocolate Cupcake">Order</a></div></div>
+    </div><div class="card"><svg viewBox="0 0 200 200" role="img" aria-label="Vanilla cupcake"><use href="#cupcake"/></svg><div><h3>Vanilla Cupcake</h3><p>Pink buttercream on a soft vanilla sponge.</p><div class="card-bottom"><span class="price-pill">AED 12</span><a class="mini-btn" href="#order" data-item="Vanilla Cupcake">Order</a></div></div>
+    </div><div class="card"><svg viewBox="0 0 200 200" role="img" aria-label="Red velvet cupcake" style="--top:#fff3ea;--liner:#a31d3d;--cherry:#a31d3d"><use href="#cupcake"/></svg><div><h3>Red Velvet Cupcake</h3><p>Cocoa-kissed red sponge with cream cheese frosting.</p><div class="card-bottom"><span class="price-pill">AED 13</span><a class="mini-btn" href="#order" data-item="Red Velvet Cupcake">Order</a></div></div>
+   </div></div>
+  </section>
+
+  <section id="muffins">
+   <h2>Muffins</h2>
+   <p class="sub">Big, soft and baked fresh every morning.</p>
+   <div class="grid">
+    <div class="card"><svg viewBox="0 0 200 200" role="img" aria-label="Blueberry muffin"><use href="#muffin"/></svg><div><h3>Blueberry Muffin</h3><p>Juicy berries in a buttery crumb.</p><div class="card-bottom"><span class="price-pill">AED 10</span><a class="mini-btn" href="#order" data-item="Blueberry Muffin">Order</a></div></div>
+    </div><div class="card"><svg viewBox="0 0 200 200" role="img" aria-label="Double chocolate muffin" style="--mtop:#5a2f1f;--mdot:#2a140c"><use href="#muffin"/></svg><div><h3>Double Chocolate Muffin</h3><p>Cocoa batter with melty chocolate chunks.</p><div class="card-bottom"><span class="price-pill">AED 11</span><a class="mini-btn" href="#order" data-item="Double Chocolate Muffin">Order</a></div></div>
+    </div><div class="card"><svg viewBox="0 0 200 200" role="img" aria-label="Banana walnut muffin" style="--mtop:#e0a850;--mdot:#8a5a2b"><use href="#muffin"/></svg><div><h3>Banana Walnut Muffin</h3><p>Ripe bananas and toasted walnuts.</p><div class="card-bottom"><span class="price-pill">AED 10</span><a class="mini-btn" href="#order" data-item="Banana Walnut Muffin">Order</a></div></div>
+   </div></div>
+  </section>
+
+  <section>
+   <h2>Pastries</h2>
+   <p class="sub">Baked every morning and often sold out by afternoon.</p>
+   <div class="grid">
+    <div class="card"><svg viewBox="0 0 200 200" role="img" aria-label="Croissant"><use href="#croissant"/></svg><div><h3>Butter Croissant</h3><p>Flaky, golden and laminated by hand.</p><div class="card-bottom"><span class="price-pill">AED 9</span><a class="mini-btn" href="#order" data-item="Butter Croissant">Order</a></div></div>
+    </div><div class="card"><svg viewBox="0 0 200 200" role="img" aria-label="Chocolate donut"><use href="#donut"/></svg><div><h3>Chocolate Donut</h3><p>Rich ganache and rainbow sprinkles.</p><div class="card-bottom"><span class="price-pill">AED 8</span><a class="mini-btn" href="#order" data-item="Chocolate Donut">Order</a></div></div>
+   </div></div>
+  </section>
+
+  <section>
+   <div class="perks">
+    <div><strong>Free UAE delivery</strong>No minimum order, no delivery fee, in every emirate.</div>
+    <div><strong>10% off your first order</strong>Spend more than AED 200 on your first order and save 10%.</div>
+    <div><strong>Baked the same day</strong>Everything is made fresh in the morning.</div>
+    <div><strong>Custom messages</strong>Add a name or message to any cake.</div>
+   </div>
+  </section>
+
+  <section id="store">
+   <h2>Visit our offline store</h2>
+   <p class="sub">Prefer to shop in person? Visit our Delicious Bakery branch in Sharjah.</p>
+   <div class="store">
+    <div class="store-card">
+     <span class="store-label">OFFLINE STORE · SHARJAH</span>
+     <h3>Delicious Bakery – Sharjah Branch</h3>
+     <p><strong>📍 Location:</strong> Al Nahda, Sharjah, United Arab Emirates</p>
+     <p><strong>🏪 Address:</strong> Shop 12, Delicious Bakery Building, Al Nahda Street, Sharjah, UAE</p>
+     <p><strong>🕘 Opening hours:</strong> Monday–Sunday · 8:00 AM–10:00 PM</p>
+     <p><strong>📞 Phone:</strong> +971 50 000 0000</p>
+     <div class="store-actions">
+      <a class="btn" href="#order">Order online</a>
+      <a class="btn alt" href="https://www.google.com/maps/search/?api=1&query=Delicious+Bakery+Al+Nahda+Sharjah" target="_blank" rel="noopener">Open map</a>
+     </div>
+    </div>
+    <div class="store-map" aria-label="Google Maps showing Al Nahda, Sharjah">
+     <iframe
+      title="Google Maps — Al Nahda, Sharjah"
+      src="https://www.google.com/maps?q=Al+Nahda,+Sharjah,+United+Arab+Emirates&output=embed"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      allowfullscreen></iframe>
+    </div>
+   </div>
+  </section>
+
+  <section id="reviews">
+   <h2>What customers say</h2>
+   <p class="sub">Placeholder reviews. Replace them with your real customers' words and names.</p>
+   <div class="reviews">
+    <blockquote><span class="stars" aria-label="5 stars">★★★★★</span><p>The Butterscotch Cake was the star of my daughter's birthday. Not too sweet, and the crunchy bits on top are addictive.</p><cite>Customer name</cite></blockquote>
+    <blockquote><span class="stars" aria-label="5 stars">★★★★★</span><p>The dark chocolate cupcakes are the best I've had. They arrived fresh and the delivery was free.</p><cite>Customer name</cite></blockquote>
+    <blockquote><span class="stars" aria-label="5 stars">★★★★★</span><p>I order a box of chocolate chip cupcakes and muffins for the office every week. Everyone asks where they're from.</p><cite>Customer name</cite></blockquote>
+   </div>
+   <p class="note">Tip: add a customer's photo next to each review once you have their permission.</p>
+  </section>
+
+  <section id="order">
+   <h2>Place an order</h2>
+   <p class="sub">Delivery is free across the UAE. First order above AED 200? You get 10% off. We'll confirm your order by phone or message.</p>
+   <form id="f">
+    <input id="n" placeholder="Your name" required aria-label="Your name">
+    <select id="c" aria-label="Item"><option>Butterscotch Cake</option><option>Russian Honey Cake</option><option>Black Forest Cake</option><option>White Forest Cake</option><option>Vancho Cake</option><option>Nutty Caramel Cake</option><option>Chocolate Chip Cupcake</option><option>Dark Chocolate Cupcake</option><option>Vanilla Cupcake</option><option>Red Velvet Cupcake</option><option>Blueberry Muffin</option><option>Double Chocolate Muffin</option><option>Banana Walnut Muffin</option><option>Butter Croissant</option><option>Chocolate Donut</option></select>
+    <select id="e" aria-label="Emirate"><option>Abu Dhabi</option><option>Dubai</option><option>Sharjah</option><option>Ajman</option><option>Umm Al Quwain</option><option>Ras Al Khaimah</option><option>Fujairah</option></select>
+    <input id="code" placeholder="Discount code (optional)" aria-label="Discount code">
+    <input id="d" type="date" required aria-label="Delivery date">
+    <textarea id="m" rows="3" placeholder="Message on the cake or special requests" aria-label="Notes"></textarea>
+    <button class="btn" type="submit" style="border:0;cursor:pointer;font:inherit;font-weight:700">Send order request</button>
+    <div class="ok" id="ok" role="status"></div>
+   </form>
+  </section>
+ </main>
+</div>
+<footer>Delicious Bakery · Free delivery across the UAE</footer>
+
+<script>
+
+(function(){
+  var shell=document.querySelector('.carousel-shell');
+  if(!shell)return;
+  var track=shell.querySelector('.carousel-track');
+  var prev=shell.querySelector('[data-carousel="prev"]');
+  var next=shell.querySelector('[data-carousel="next"]');
+  function move(dir){track.scrollBy({left:dir*track.clientWidth*.82,behavior:'smooth'});}
+  prev.addEventListener('click',function(){move(-1)});
+  next.addEventListener('click',function(){move(1)});
+  track.addEventListener('keydown',function(e){if(e.key==='ArrowLeft'){e.preventDefault();move(-1)} if(e.key==='ArrowRight'){e.preventDefault();move(1)}});
+})();
+document.querySelectorAll('[data-item]').forEach(function(a){a.addEventListener('click',function(){document.getElementById('c').value=a.dataset.item})});
+document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();
+ document.getElementById('ok').textContent='Thanks, '+document.getElementById('n').value+'! We received your request for '+document.getElementById('c').value+' to '+document.getElementById('e').value+'. Delivery is free.';
+ e.target.reset();});
+
+(function(){var pop=document.getElementById('pop'),seen=false;
+try{seen=sessionStorage.getItem('popSeen')==='1'}catch(e){}
+function close(){pop.classList.remove('show');try{sessionStorage.setItem('popSeen','1')}catch(e){}}
+if(!seen)setTimeout(function(){pop.classList.add('show');document.getElementById('px').focus()},1500);
+document.getElementById('px').onclick=close;
+pop.addEventListener('click',function(e){if(e.target===pop)close()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+document.getElementById('pcopy').onclick=function(){var b=this;
+ try{navigator.clipboard.writeText('TASTY10')}catch(e){}
+ document.getElementById('code').value='TASTY10';b.textContent='Copied! Code added to order form';
+ setTimeout(close,1200)};
+})();
+</script>
+</body>
+</html>
